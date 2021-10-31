@@ -41,10 +41,23 @@
             text-align: justify;
             text-align-last: left;
         }
+        .v {
+            vertical-align: baseline;
+            /* top, bottom, middle, baseline */
+        }
+        h1 span {
+            vertical-align: baseline;
+        }
+        h1 small {
+            vertical-align: baseline;
+        }
     </style>
 </head>
 <body>
-    <h1>title</h1>
+    <h1>
+        <span>title</span>
+        <small>small</small>
+    </h1>
     <p> 
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic delectus omnis beatae, facilis tempora commodi harum architecto pariatur, autem aliquid, eveniet illo fugit culpa. Iure voluptatem eveniet temporibus quisquam provident.
     </p>
@@ -59,5 +72,23 @@
     </p>
     <h2>title 2</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quis asperiores placeat explicabo rerum praesentium, atque nulla doloribus accusamus aliquid consequatur illum ullam totam corrupti veritatis, velit architecto perferendis cupiditate!</p>
+    <table border="1" width="600" height="400">
+        <tr>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+        </tr>
+        <tr>
+            <td>test</td>
+            <td class="v">test</td>
+            <td>test</td>
+        </tr>
+        <tr>
+            <td>test</td>
+            <td>test</td>
+            <td>test</td>
+        </tr>
+
+    </table>
 </body>
 </html>
