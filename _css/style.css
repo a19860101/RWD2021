@@ -6,6 +6,9 @@ h1 {
 .abc{
     color: orange;
 }
+.xyz {
+    color: red;
+}
 #xyz {
     color:palevioletred;
 }
@@ -22,6 +25,8 @@ h1 {
 
     權重
     影響的元素越少，權重越重
-    id > class > tag
+    嵌入式 > id > class > tag
+
+    當權重相同時，後寫的會優先套用
 
 */
