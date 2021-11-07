@@ -18,6 +18,7 @@
       - [hsl/hsla色碼](#hslhsla色碼)
     - [文字對齊 - text-align](#文字對齊---text-align)
     - [文字末行對齊 - text-align-last](#文字末行對齊---text-align-last)
+    - [垂直對齊 - vertical-align](#垂直對齊---vertical-align)
     - [文字裝飾 - text-decoration](#文字裝飾---text-decoration)
     - [行高 - line-height](#行高---line-height)
     - [字元間距 - letter-spacing](#字元間距---letter-spacing)
@@ -62,6 +63,7 @@
     - [固定 - fixed](#固定---fixed)
     - [黏性 - sticky](#黏性---sticky)
   - [flex](#flex)
+
 # CSS Cascading Style Sheet
 
 串接樣式表
@@ -276,6 +278,13 @@ h1 {
 - center
 - right
 - justify
+
+### 垂直對齊 - vertical-align
+
+- top
+- middle
+- bottom
+- baseline
 
 ### 文字裝飾 - text-decoration
 
