@@ -6,20 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+        * {
+            box-sizing: border-box;
+        }
         .container {
             font-size: 0;
-            width: 900px;
+            width:1000px;
             margin: auto;
         }
         .box {
-            width: 300px;
+            width: calc(100% / 3);
             background-color: #098;
 
             display: inline-block;
             font-size: 16px;
             vertical-align: top;
             /* top,middle,bottom,baseline */
+            padding:15px;
+
         }
         /* 
             1. 父元素font-size設定為0
