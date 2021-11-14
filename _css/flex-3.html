@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1400px;
+            height: 800px;
+            margin: auto;
+            display: flex;
+            background-color: #ccc;
+            flex-wrap: wrap;
+            /* 水平 */
+            justify-content: space-around;
+            /*  
+                flex-start,flex-end, center
+                space-between, space-around,space-evenly
+            */
+
+            /* 垂直 */
+            align-items: center;
+            /* 
+                flex-start,flex-end, center
+                stretch, baseline
+            */
+
+            text-align: justify;
+        }
+        .box {
+            width: calc(100% / 4 );
+
+            background-color: #fa0;
+        }
+        .box:nth-of-type(1){
+            background-color: #098;
+            align-self: flex-start;
+        }
+        .box:nth-of-type(4){
+            background-color: #e04;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, repellendus quo quis dolorum saepe inventore maxime atque, praesentium quisquam omnis nemo, excepturi natus aliquam facilis tempora ad similique harum. Labore?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, repellendus quo quis dolorum saepe inventore maxime atque, praesentium quisquam omnis nemo, excepturi natus aliquam facilis tempora ad similique harum. Labore?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, repellendus quo quis dolorum saepe inventore maxime atque, praesentium quisquam omnis nemo, excepturi natus aliquam facilis tempora ad similique harum. Labore?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, repellendus quo quis dolorum saepe inventore maxime atque, praesentium quisquam omnis nemo, excepturi natus aliquam facilis tempora ad similique harum. Labore?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, repellendus quo quis dolorum saepe inventore maxime atque, praesentium quisquam omnis nemo, excepturi natus aliquam facilis tempora ad similique harum. Labore?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, repellendus quo quis dolorum saepe inventore maxime atque, praesentium quisquam omnis nemo, excepturi natus aliquam facilis tempora ad similique harum. Labore?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, repellendus quo quis dolorum saepe inventore maxime atque, praesentium quisquam omnis nemo, excepturi natus aliquam facilis tempora ad similique harum. Labore?
+            </p>
+        </div>
+        
+    </div>
+</body>
+</html>
