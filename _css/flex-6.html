@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            flex:0 0 100%;
+            padding: 15px;
+            text-align: justify;
+        }
+        .box:nth-of-type(1){
+            order:5;
+        }
+        .box:nth-of-type(2){
+            order:4;
+        }
+        .box:nth-of-type(3){
+            order: 3;
+        }
+        .box:nth-of-type(4){
+            order:2
+        }
+        .box:nth-of-type(5){
+            order:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur officia eaque ex excepturi iste iure adipisci ut, cumque dolores vero dolorum, quis dignissimos esse nihil sed ab assumenda consectetur sequi magnam est, asperiores debitis aperiam? In quis aliquam explicabo perspiciatis?</p>
+        </div>
+        <div class="box">
+            <h2>title2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A aliquam eveniet dignissimos dolorem iure adipisci quae voluptatum quisquam libero commodi!</p>
+        </div>
+        <div class="box">
+            <h2>title3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis sunt ipsam et voluptatum delectus quaerat vel earum atque, nihil quas aperiam, ullam mollitia, laudantium non error. Voluptas similique sunt mollitia quos nisi esse, eius aut error in, possimus officiis magni laboriosam libero quas voluptatem accusamus dolor ea! Consequuntur, et quos! Maiores, ipsum.</p>
+        </div>
+        <div class="box">
+            <h2>title4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, deleniti? Quas deserunt vero maxime, iste iusto at tempora possimus, suscipit quibusdam laudantium, molestias vitae repellat quasi sed maiores commodi optio culpa nobis eos omnis laboriosam alias dolorem! Sequi odio eos repudiandae adipisci, fugit sapiente!</p>
+        </div>
+        <div class="box">
+            <h2>title5</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, deserunt sint dolorum sapiente voluptas quaerat est maxime, veritatis rerum, ipsum recusandae laborum expedita corporis eaque iusto dicta nam. Fugit, laborum!</p>
+        </div>
+    </div>
+</body>
+</html>
