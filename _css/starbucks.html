@@ -15,8 +15,8 @@
             align-items: center;
         }
         .box {
-            /* flex:0 0 50%; */
-            flex: 1 0 0;
+            flex:0 0 50%;
+            /* flex: 1 0 0; */
             height: 100%;
             text-align: center;
 
@@ -35,6 +35,15 @@
             font-size: 3rem;
             line-height: 1.5em;
         }
+        img {
+            width: 100%;
+        }
+        .box:nth-of-type(2) img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
     </style>
 </head>
 <body>
@@ -44,7 +53,7 @@
             <a href="#">看更多板凳</a>
         </div>
         <div class="box">
-            <img src="https://picsum.photos/id/87/600" alt="">
+            <img src="https://picsum.photos/id/87/1200/600" alt="">
         </div>
     </div>
 </body>
