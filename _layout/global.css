@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI','微軟正黑體';
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
