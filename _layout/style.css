@@ -26,7 +26,13 @@ header {
 
 
 }
-
+.wave {
+    background-image: url('images/wave.svg');
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 #about {
     width: 100%;
     background-color: var(--yellow);
@@ -37,10 +43,24 @@ header {
 
 
 }
-.wave {
-    background-image: url('images/wave.svg');
-    height: 250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+#about .row {
+    align-items: center
+}
+.about-content {
+    background-color: rgba(255,255,255,.8);
+    padding: 30px;
+    width: 60%;
+    margin-left: auto;
+    position: relative;
+    right: -100px;
+    z-index: 2;
+}
+.about-gallery {
+    width: 70%;
+    position: relative;
+    left: -100px;
+    z-index: 1;
+}
+.about-gallery img {
+    clip-path: circle();
 }
