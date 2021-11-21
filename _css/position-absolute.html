@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 4000px;
+        }
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #098;
+
+            position: absolute;
+
+            right: -100px;
+            top: 0;
+        }
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: #fa0;
+
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .container {
+            width: 800px;
+            height: 600px;
+            background-color: #ccc;
+
+            position: relative;
+        }
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            position: absolute;
+
+            right: 10px;
+            top: 300px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+    <!-- 
+        以最相近且有定位(靜態不算)之父元素為定位
+
+     -->
+
+     <div class="box3"></div>
+</body>
+</html>
