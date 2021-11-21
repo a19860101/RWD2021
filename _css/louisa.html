@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .box {
+            flex:0 0 33.33333%;
+            background-color: #aaa;
+        }
+        .large {
+            height: 600px
+        }
+        .small {
+            height:250px
+        }
+        img {
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="large">
+                <a href="#">
+                    <img src="https://picsum.photos/id/34/1000/500" alt="">
+                </a>
+            </div>
+            <div class="small">
+                <a href="#">
+                    <img src="https://picsum.photos/id/35/1000/500" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="small">
+                <a href="#">
+                    <img src="https://picsum.photos/id/36/1000/500" alt="">
+                </a>
+            </div>
+            <div class="large">
+                <a href="#">
+                    <img src="https://picsum.photos/id/37/1000/500" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="large">
+                <a href="#">
+                    <img src="https://picsum.photos/id/38/1000/500" alt="">
+                </a>
+            </div>
+            <div class="small">
+                <a href="#">
+                    <img src="https://picsum.photos/id/39/1000/500" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
