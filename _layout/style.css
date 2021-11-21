@@ -1,0 +1,13 @@
+:root {
+    --red: #ff6060;
+    --blue: #00b7ff;
+    --orange: #ffc550;
+    --yellow: #ffea74;
+    --green: #5a9b47;
+    --purple: rgb(108, 0, 141);
+    --dark: #181818;
+    --light: #f0f0f0;
+}
+body {
+    background-color: var(--purple)
+}
