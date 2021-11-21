@@ -75,3 +75,18 @@ header {
 .about-gallery img {
     clip-path: circle();
 }
+/* team */
+#team {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.team-avatar {
+    width: 50%;
+    border-radius: 50%;
+    border: 6px solid var(--light);
+    overflow: hidden;
+    margin: auto;
+}
+.team-content {
+    text-align: center;
+}
