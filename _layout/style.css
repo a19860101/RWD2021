@@ -8,6 +8,31 @@
     --dark: #181818;
     --light: #f0f0f0;
 }
+/* nav */
+nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* padding: 15px; */
+    height: 60px;
+    align-items: center;
+    background-color: #222;
+}
+nav a {
+    color: #eee;
+    text-decoration: none;
+    margin: 0 10px;
+}
+nav li {
+    list-style:none;
+}
+nav .menu-left {
+    margin-right: auto;
+}
+nav ul {
+    display: flex;
+}
 header {
     width: 100%;
     height: calc(100vh + 10vw);
