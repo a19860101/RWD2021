@@ -115,3 +115,20 @@ header {
     border: 1px solid rgb(246, 44, 44);
     background-color: #098;
 }
+.btn {
+    display: inline-block;
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-yellow {
+    background-color: #ffd54d;
+    color: #000;
+}
+.btn-blue {
+    background-color: #08c5ff;
+    color: #000;
+}
