@@ -94,8 +94,9 @@ header {
     padding: 30px;
     width: 60%;
     margin-left: auto;
+    margin-right: auto;
     position: relative;
-    right: -100px;
+    /* right: -100px; */
     z-index: 2;
 
     border-radius: 5px;
@@ -105,19 +106,39 @@ header {
 
     /* filter: blur(10px); */
 }
+@media(min-width:1200px){
+    .about-content {
+        margin-right: initial;
+        right: -100px;
+
+    }
+}
 #about h2 {
     margin-bottom: 15px;
     font-size: 2rem;
 }
 .about-gallery {
-    width:90%;
+    width:60%;
     position: relative;
-    left: -100px;
+    /* left: -100px; */
+    top: -100px;
+    margin: auto;
     z-index: 1;
 }
 .about-gallery img {
     clip-path: circle();
 }
+@media(min-width:1200px){
+    .about-gallery {
+        width:90%;
+
+        left: -100px;
+        top: 0;
+
+
+    }
+}
+
 /* team */
 #team {
     padding-top: 100px;
