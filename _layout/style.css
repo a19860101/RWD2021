@@ -90,3 +90,28 @@ header {
 .team-content {
     text-align: center;
 }
+/* CONTACT */
+
+.contact-item {
+    /* background-color: #ccc; */
+    width: 80%;
+    margin: auto;
+}
+.form-item {
+    margin-bottom: 20px;
+}
+.form-label {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #3f3f3f;
+    outline:0;
+}
+.form-control:focus {
+    border: 1px solid rgb(246, 44, 44);
+    background-color: #098;
+}
