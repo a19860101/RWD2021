@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #098;
+            /* transition: 1s; */
+            transition-property: transform,background-color;
+            transition-duration: 1s,5s;
+            transition-delay: 0s;
+            transition-timing-function: ease;
+            /* ease, ease-in, ease-out, ease-in-out, linear */
+        }
+        .box:hover {
+            transform: rotate(45deg);
+            background-color: #fa0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        hello
+    </div>
+</body>
+</html>
