@@ -25,7 +25,13 @@
             /* animation-play-state: running; */
             /* paused,running */
 
-            animation:test .5s 0s infinite alternate ease-in-out;
+            /* animation:test .5s 0s infinite alternate ease-in-out; */
+            display: block;
+            transition: 1s;
+        }
+        .box:hover {
+            animation: fadeOut 1s forwards;
+            /* display: none; */
         }
         @keyframes test {
             from {
@@ -41,6 +47,10 @@
             0% {opacity: 0;}
             50% {opacity: 1;}
             100% {opacity: 0;}
+        }
+        @keyframes fadeOut{
+            from {opacity: 1;}
+            to {opacity: 0;}
         }
     </style>
 </head>
