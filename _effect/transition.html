@@ -11,15 +11,17 @@
             height: 200px;
             background-color: #098;
             /* transition: 1s; */
-            transition-property: transform,background-color;
-            transition-duration: 1s,5s;
-            transition-delay: 0s;
-            transition-timing-function: ease;
+            /* transition-property: transform,background-color; */
+            /* transition-duration: 1s,5s; */
+            /* transition-delay: 0s; */
+            /* transition-timing-function: ease; */
             /* ease, ease-in, ease-out, ease-in-out, linear */
+            /* https://cubic-bezier.com/ */
+            transition: 2s cubic-bezier(.19,-0.44,.57,1.3)
         }
         .box:hover {
-            transform: rotate(45deg);
-            background-color: #fa0;
+            transform: rotate(360deg);
+            /* background-color: #fa0; */
         }
     </style>
 </head>
