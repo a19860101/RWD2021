@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #e04;
+            /* animation:test2 3s; */
+            /* animation-name:test; */
+            /* animation-duration: 5s; */
+            /* animation-delay: 0s; */
+            /* animation-timing-function: ease; */
+
+            /* animation-iteration-count: infinite; */
+            /* animation-fill-mode: forwards; */
+            /* forwards, backwards */
+            /* animation-direction: alternate-reverse; */
+            /* normal,reverse,alternate,alternate-reverse */
+
+            /* animation-play-state: running; */
+            /* paused,running */
+
+            animation:test .5s 0s infinite alternate ease-in-out;
+        }
+        @keyframes test {
+            from {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateX(200px);
+            }
+        }
+        @keyframes test2 {
+            0% {opacity: 0;}
+            50% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>
