@@ -38,7 +38,17 @@ a.shift();
 let s = 'hello,hello__world__javascript!!!';
 console.log(s.split('__'));
 
-console.log(a);
+//splice() 拼接 會改變原始陣列
+// 通常用在刪除陣列資料
+// a.splice(2,1,'test','test2','test3');
+// a.splice(4,1);
+// console.log(a);
+
+//slice() 切片 不會改變原始陣列
+// 通常用在資料分頁
+let a_slice = a.slice(1,3);
+console.log(a_slice);
+
 
 
 
