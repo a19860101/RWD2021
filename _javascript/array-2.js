@@ -17,7 +17,4 @@ let drinks_map = drinks.map(function(data){
 })
 console.log(drinks_map);
 console.log(drinks);
-// find
-// findIndex
-// filter
-// reduce
+
