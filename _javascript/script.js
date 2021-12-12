@@ -35,3 +35,28 @@ const x = 10;
 const ary = ['apple'];
 // ary = ['apple','banana'];
 // ary.push('banana');
+
+// 資料型態
+
+/* 
+Number 數值
+String 字串
+Boolean 布林 true/false
+undefined 未定義
+null 空值
+
+array 陣列
+object 物件
+function 函式
+
+Symbol
+Set 集合
+
+*/
+let q = null ;
+console.log(q);
+
+let s1 = 'hello';
+let s2 = "hello";
+let s3 = `hello`;
+//字串樣板
