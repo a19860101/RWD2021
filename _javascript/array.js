@@ -29,7 +29,16 @@ a.pop();
 a.unshift('first');
 a.shift();
 
+// 陣列->字串
+// console.log(a.toString());
+// console.log(a.join('__'));
 
+//字串->陣列
+//split()
+let s = 'hello,hello__world__javascript!!!';
+console.log(s.split('__'));
 
 console.log(a);
+
+
 
