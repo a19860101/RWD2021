@@ -48,4 +48,26 @@ const drink_price =drinks.map(function(drink){
 })
 console.log(drink_price);
 
+// const drink_filter = drinks.filter(function(drink){
+//     return drink.price < 100;
+// });
+// const cheap = drink_filter.map(function(drink){
+//     return drink.name;
+// })
+// console.log(cheap)
+
+
+
+const drink_ = drinks.filter(function(drink){
+    return drink.name != '奶茶';
+})
+console.log(drink_);
+
+
+const cheap = drinks.filter(function(drink){
+    return drink.price < 100;
+}).map(function(drink){
+    return drink.name;
+})
+console.log(cheap)
 
