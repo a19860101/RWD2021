@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            height: 100vh;
+
+            grid-template-areas: 
+                "footer footer footer"
+                "nav nav nav"
+                "main main main"
+                "main main main"
+                "aside aside aside"
+            ;
+        }
+        @media(min-width:1200px){
+            .container {
+                grid-template-areas: 
+                "nav nav nav"
+                "aside main main"
+                "aside main main"
+                "aside main main"
+                "footer footer footer"
+            ;
+            }
+        }
+        nav {
+            grid-area: nav;
+            background-color: #ff8383;
+        }
+        aside {
+            grid-area: aside;
+            background-color: #fffd83;
+        }
+        main {
+            grid-area: main;
+            background-color: #83f1ff;
+        }
+        footer {
+            grid-area: footer;
+            background-color: #87ff83;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>nav</nav>
+        <aside>aside</aside>
+        <main>main</main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
