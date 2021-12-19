@@ -28,19 +28,31 @@
         // console.log(title);
         // let content = document.getElementsByClassName('content')[0];
         // console.log(content);
-        // let item = document.getElementsByClassName('item');
+        let item = Array.from(document.getElementsByClassName('item'));
         // console.log(item);
         // let a = document.getElementsByTagName('a');
         // console.log(a);
 
-        let title = document.querySelector('#title');
-        console.log(title);
-        let content = document.querySelector('.content');
-        console.log(content);
-        let item = document.querySelector('.item');
+        // let title = document.querySelector('#title');
+        // console.log(title);
+        // let content = document.querySelector('.content');
+        // console.log(content);
+        // let item = document.querySelector('.item');
+        // console.log(item);
+        // let item = Array.from(document.querySelectorAll('.item'));
         console.log(item);
-        let items = document.querySelectorAll('.item');
-        console.log(items);
+
+        for(let i=0;i<item.length;i++){
+            console.log(item[i]);
+        }
+
+        for(let data of item){
+            console.log(data);
+        }
+
+        item.forEach(function(data){
+            console.log(data);
+        })
     </script>
 </body>
 </html>
