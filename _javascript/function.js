@@ -32,12 +32,12 @@ const test = function(){
 //     return 'qqq';
 // }
 
-// 只有一個參數十 小括號可省略
+// 只有一個參數時，小括號可省略
 // const qqq = x => {
 //     return x;
 // }
 
-// 當大擴號內只有return時 大擴號與return皆可省略
+// 當大括號內只有return時，大括號與return皆可省略
 const qqq = x => x;
 
 
