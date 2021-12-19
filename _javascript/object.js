@@ -69,5 +69,9 @@ const cheap = drinks.filter(function(drink){
 }).map(function(drink){
     return drink.name;
 })
-console.log(cheap)
+console.log(cheap);
 
+const total = drink_price.reduce(function(a,b){
+    return a + b;
+})
+console.log(total)
