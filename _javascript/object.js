@@ -83,6 +83,13 @@ console.log(total);
 const {mail,name} = o;
 console.log(mail,name);
 
-drinks.forEach(function({name,price}){
-    console.log(name,price)
+drinks.forEach(function({name:n,price:p}){
+    console.log(n,p)
 })
+
+
+const ary = ['王力宏','蜘蛛人','HELLO'];
+const [ary1,,ary2] = ary;
+
+console.log(ary1)
+
