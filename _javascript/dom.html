@@ -24,15 +24,23 @@
     </ul>
     <a href="#" class="link">link</a>
     <script>
-        let title = document.getElementById('title');
-        console.log(title);
-        let content = document.getElementsByClassName('content')[0];
-        console.log(content);
-        let item = document.getElementsByClassName('item');
-        console.log(item);
-        let a = document.getElementsByTagName('a');
-        console.log(a);
+        // let title = document.getElementById('title');
+        // console.log(title);
+        // let content = document.getElementsByClassName('content')[0];
+        // console.log(content);
+        // let item = document.getElementsByClassName('item');
+        // console.log(item);
+        // let a = document.getElementsByTagName('a');
+        // console.log(a);
 
+        let title = document.querySelector('#title');
+        console.log(title);
+        let content = document.querySelector('.content');
+        console.log(content);
+        let item = document.querySelector('.item');
+        console.log(item);
+        let items = document.querySelectorAll('.item');
+        console.log(items);
     </script>
 </body>
 </html>
