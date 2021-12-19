@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeColor()">click</button>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sequi natus, deleniti impedit vero itaque tempore, incidunt quidem at eos sapiente necessitatibus adipisci eligendi porro vitae sed atque provident amet!
+    </p>
+    <script>
+        function changeColor(){
+            let p =  document.querySelector('p');
+            p.style.color = '#e04';
+            p.style.backgroundColor = '#098';
+            p.style.padding = '20px';
+        }
+    </script>
+</body>
+</html>
