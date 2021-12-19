@@ -9,10 +9,18 @@
         p {
             transition: .5s;
         }
+        p.active {
+            color: #f00;
+            background-color: #ccc;
+            padding: 30px;
+        }
     </style>
 </head>
 <body>
     <button onclick="changeColor()">click</button>
+    <button class="add">add</button>
+    <button class="remove">remove</button>
+    <button class="toggle">toggle</button>
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sequi natus, deleniti impedit vero itaque tempore, incidunt quidem at eos sapiente necessitatibus adipisci eligendi porro vitae sed atque provident amet!
     </p>
@@ -23,6 +31,20 @@
             p.style.backgroundColor = '#098';
             p.style.padding = '20px';
         }
+        document.querySelector('.add').onclick = ()=>{
+            let p =  document.querySelector('p');
+            p.classList.add('active');
+        }
+        document.querySelector('.remove').onclick = ()=>{
+            let p =  document.querySelector('p');
+            p.classList.remove('active');
+        }
+        document.querySelector('.toggle').onclick = ()=>{
+            let p =  document.querySelector('p');
+            p.classList.toggle('active');
+        }
     </script>
+
+    
 </body>
 </html>
