@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">dom document object model</h1>
+        <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed perferendis maxime incidunt beatae cumque? Sequi molestiae rerum quos laudantium reiciendis vero autem iste laborum commodi accusantium! Ipsum facere accusamus nisi.
+        </p>
+        <ul>
+            <li class="item">item 1</li>
+            <li class="item">item 2</li>
+            <li class="item">item 3</li>
+            <li class="item">item 4</li>
+        </ul>
+        <a href="#" class="link">link</a>
+    </div>
+    <script>
+        let el = document.querySelector('.content');
+
+        console.log(el.parentElement);
+        console.log(el.parentNode);
+
+        console.log(el.children);
+        console.log(el.childNodes);
+
+        let ul = document.querySelector('ul');
+        console.log(ul.children);
+
+        console.log(ul.nextElementSibling);
+        console.log(ul.previousElementSibling);
+
+        console.log(ul.nextSibling);
+        console.log(ul.previousSibling)
+
+        //節點類型:元素節點、文字節點、註解節點
+    </script>
+</body>
+</html>
