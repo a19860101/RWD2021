@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery {
+            width: 600px;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+        }
+        .gallery-list {
+            display: flex;
+        }
+        .gallery-item {
+            width: calc(100% / 5);
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="images/iphone-13-blue-select-2021.png" class="gallery-main">
+        <div class="gallery-list">
+            <img src="images/iphone-13-blue-select-2021.png" class="gallery-item">
+            <img src="images/iphone-13-midnight-select-2021.png" class="gallery-item">
+            <img src="images/iphone-13-pink-select-2021.png" class="gallery-item">
+            <img src="images/iphone-13-product-red-select-2021.png" class="gallery-item">
+            <img src="images/iphone-13-starlight-select-2021.png" class="gallery-item">
+        </div>
+    </div>
+    <script>
+        let items = Array.from(document.querySelectorAll('.gallery-item'));
+
+        items.forEach(data=>{
+            data.onclick = function(){
+                let src = this.getAttribute('src');
+                // console.log(src);
+                document.querySelector('.gallery-main').setAttribute('src',src);
+            }
+        })
+    </script>
+</body>
+</html>
