@@ -43,4 +43,17 @@ const qqq = x => x;
 
 console.log(qqq(111));
 
+const obj = {
+    name: 'John',
+    mail:'asdf@gmasil.com',
+    active: function(){
+        return this;
+    },
+    active2: ()=>{
+        return this;
+    }
+}
+
+console.log(obj.active2())
+
 
