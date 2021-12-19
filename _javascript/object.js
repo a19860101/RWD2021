@@ -74,4 +74,15 @@ console.log(cheap);
 const total = drink_price.reduce(function(a,b){
     return a + b;
 })
-console.log(total)
+console.log(total);
+
+// Array.from();
+
+//解構賦值
+
+const {mail,name} = o;
+console.log(mail,name);
+
+drinks.forEach(function({name,price}){
+    console.log(name,price)
+})
