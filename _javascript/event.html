@@ -31,18 +31,31 @@
             p.style.backgroundColor = '#098';
             p.style.padding = '20px';
         }
-        document.querySelector('.add').onclick = ()=>{
-            let p =  document.querySelector('p');
+        let p =  document.querySelector('p');
+        // document.querySelector('.add').onclick = ()=>{
+        //     let p =  document.querySelector('p');
+        //     p.classList.add('active');
+        // }
+        // document.querySelector('.remove').onclick = ()=>{
+        //     let p =  document.querySelector('p');
+        //     p.classList.remove('active');
+        // }
+        // document.querySelector('.toggle').onclick = ()=>{
+        //     let p =  document.querySelector('p');
+        //     p.classList.toggle('active');
+        // }
+
+        document.querySelector('.add').addEventListener('click',function(){
             p.classList.add('active');
-        }
-        document.querySelector('.remove').onclick = ()=>{
-            let p =  document.querySelector('p');
+        });
+        document.querySelector('.remove').addEventListener('click',function(){
             p.classList.remove('active');
-        }
-        document.querySelector('.toggle').onclick = ()=>{
-            let p =  document.querySelector('p');
+        });
+        document.querySelector('.toggle').addEventListener('click',function(){
             p.classList.toggle('active');
-        }
+        });
+
+        // 捕捉/冒泡 true/false
     </script>
 
     

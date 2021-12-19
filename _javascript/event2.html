@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 300px;
+            height: 150px;
+            background-color: #ccc;
+        }
+        .child {
+            padding: 10px;
+            display: inline-block;
+            background-color: #eb7a7a;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <a href="#" class="child">click</a>
+    </div>
+    <script>
+        let parent = document.querySelector('.parent');
+        let child = document.querySelector('.child');
+
+        parent.addEventListener('click',function(){
+            console.log('parent捕捉');//1
+        },true);
+        parent.addEventListener('click',function(){
+            console.log('parent冒泡');//2
+        },false);
+        child.addEventListener('click',function(){
+            console.log('child捕捉');//3
+        },true);
+        child.addEventListener('click',function(){
+            console.log('child冒泡');//4
+        },false);
+        
+        
+    </script>
+</body>
+</html>
