@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+        .tabs {
+            width: 600px;
+            margin: auto;
+        }
+        .tab-nav {
+            background-color: #ccc;
+            display: flex;
+        }
+        .tab-link {
+            color: #000;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .tab-link.active {
+            background-color: #fa0;
+        }
+        .tab-panel {
+            padding: 10px;
+            background-color: #ccc;
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+            background-color: #fa0;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab-nav">
+            <a href="#" class="tab-link active">tab 1</a>
+            <a href="#" class="tab-link ">tab 2</a>
+            <a href="#" class="tab-link">tab 3</a>
+        </div>
+        <div class="tab-panel active" id="tab-1">
+            <h2>tab 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id atque perferendis repudiandae dolorem doloremque fugit, eligendi ducimus minus hic at dolor ipsa deleniti deserunt blanditiis inventore odit distinctio soluta nam!
+            </p>
+        </div>
+        <div class="tab-panel " id="tab-2">
+            <h2>tab 2</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit tempora cumque incidunt quaerat? Dolores consequatur maiores voluptate repellendus delectus debitis quibusdam alias perspiciatis voluptatum eveniet impedit, minima accusamus aliquam iste, reiciendis quam excepturi, earum at cupiditate autem fuga fugiat! Nemo mollitia dolorem incidunt quia unde omnis voluptas, voluptatem ex? Perspiciatis!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-3">
+            <h2>tab 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor consequatur dolorum distinctio optio, nisi a, placeat fuga perferendis cum deleniti vel nulla, molestias blanditiis reprehenderit exercitationem.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
