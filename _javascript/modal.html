@@ -50,7 +50,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur distinctio quam et nemo cum quaerat assumenda enim veritatis alias, quos sit vel, quisquam rerum impedit praesentium explicabo consequatur! Placeat, eaque?</p>
             </div>
             <div class="modal-footer">
-                <a href="#">close</a>
+                <a href="#" class="modal-close">close</a>
             </div>
         </div>
     </div>
@@ -64,6 +64,9 @@
                 document.querySelector(href).classList.add('active');
             }
         })
+        document.body.onclick = e => {
+            console.log(e.target);
+        }
     </script>
 </body>
 </html>
