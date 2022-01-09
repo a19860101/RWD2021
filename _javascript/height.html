@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 200px;
+            height: 300px;
+            padding-top: 30px;
+            border-top: 3px solid #000;
+            background-color: #ccc;
+
+            overflow: hidden;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur magni tempore unde atque, sint reprehenderit aliquam eaque fuga corrupti ex quisquam, natus quos quaerat assumenda magnam nemo inventore aperiam!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur magni tempore unde atque, sint reprehenderit aliquam eaque fuga corrupti ex quisquam, natus quos quaerat assumenda magnam nemo inventore aperiam!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur magni tempore unde atque, sint reprehenderit aliquam eaque fuga corrupti ex quisquam, natus quos quaerat assumenda magnam nemo inventore aperiam!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur magni tempore unde atque, sint reprehenderit aliquam eaque fuga corrupti ex quisquam, natus quos quaerat assumenda magnam nemo inventore aperiam!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur magni tempore unde atque, sint reprehenderit aliquam eaque fuga corrupti ex quisquam, natus quos quaerat assumenda magnam nemo inventore aperiam!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur magni tempore unde atque, sint reprehenderit aliquam eaque fuga corrupti ex quisquam, natus quos quaerat assumenda magnam nemo inventore aperiam!
+    </div>
+    <script>
+        let box = document.querySelector('.box');
+        console.log('client:'+box.clientHeight);//height+padding
+        console.log('offset:'+box.offsetHeight);//height+padding+border
+        console.log('scroll:'+box.scrollHeight);//height+padding+overflow
+    </script>
+</body>
+</html>
