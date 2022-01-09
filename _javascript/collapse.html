@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+        .collapse {
+            width: 600px;
+            margin: auto;
+        }
+        .collapse-link {
+            background-color: #ccc;
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #000;
+            border-bottom: 1px solid #000;
+        }
+        .collapse-panel {
+            background-color: #aaa;
+            padding:0 15px;
+            height: 0;
+            overflow: hidden;
+            transition: .4s;
+        }
+        .collapse-panel.active {
+            padding: 30px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="collapse">
+        <a href="#" class="collapse-link">title 1</a>
+        <div class="collapse-panel">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, inventore aut quae vitae autem doloremque? Vel doloremque eius aliquid eveniet recusandae repellat repellendus quidem natus similique! Corrupti distinctio incidunt ab?
+            </p>
+        </div>
+        <a href="#" class="collapse-link">title 2</a>
+        <div class="collapse-panel">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, inventore aut quae vitae autem doloremque? Vel doloremque eius aliquid eveniet recusandae repellat repellendus quidem natus similique! Corrupti distinctio incidunt ab?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, inventore aut quae vitae autem doloremque? Vel doloremque eius aliquid eveniet recusandae repellat repellendus quidem natus similique! Corrupti distinctio incidunt ab?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, inventore aut quae vitae autem doloremque? Vel doloremque eius aliquid eveniet recusandae repellat repellendus quidem natus similique! Corrupti distinctio incidunt ab?
+            </p>
+        </div>
+        <a href="#" class="collapse-link">title 3</a>
+        <div class="collapse-panel">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, inventore aut quae vitae autem doloremque? Vel doloremque eius aliquid eveniet recusandae repellat repellendus quidem natus similique! Corrupti distinctio incidunt ab?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, inventore aut quae vitae autem doloremque? Vel doloremque eius aliquid eveniet recusandae repellat repellendus quidem natus similique! Corrupti distinctio incidunt ab?
+            </p>
+        </div>
+        <a href="#" class="collapse-link">title 4</a>
+        <div class="collapse-panel">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, inventore aut quae vitae autem doloremque? Vel doloremque eius aliquid eveniet recusandae repellat repellendus quidem natus similique! Corrupti distinctio incidunt ab?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, inventore aut quae vitae autem doloremque? Vel doloremque eius aliquid eveniet recusandae repellat repellendus quidem natus similique! Corrupti distinctio incidunt ab?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, inventore aut quae vitae autem doloremque? Vel doloremque eius aliquid eveniet recusandae repellat repellendus quidem natus similique! Corrupti distinctio incidunt ab?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, inventore aut quae vitae autem doloremque? Vel doloremque eius aliquid eveniet recusandae repellat repellendus quidem natus similique! Corrupti distinctio incidunt ab?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, inventore aut quae vitae autem doloremque? Vel doloremque eius aliquid eveniet recusandae repellat repellendus quidem natus similique! Corrupti distinctio incidunt ab?
+            </p>
+        </div>
+    </div>
+    <script>
+        let links = document.querySelectorAll('.collapse-link');
+        links.forEach(link => {
+            link.onclick = function(){
+
+                let panel = this.nextElementSibling;
+                panel.classList.toggle('active');
+                if(panel.style.height){
+                    panel.style.height = null;
+                }else{
+                    panel.style.height = panel.scrollHeight + 'px';
+                }
+            }
+        })
+    </script>
+</body>
+</html>
