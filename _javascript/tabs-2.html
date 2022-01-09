@@ -15,10 +15,13 @@
         .tabs {
             width: 600px;
             margin: auto;
+            position: relative;
         }
         .tab-nav {
             background-color: #ccc;
             display: flex;
+            position: relative;
+            z-index: 4;
         }
         .tab-link {
             color: #000;
@@ -32,12 +35,20 @@
         .tab-panel {
             padding: 10px;
             background-color: #ccc;
-            display: none;
+            opacity: 0;
+
+            position: absolute;
+            z-index: -1;
+            transform: translateY(-100%);
+            transition: .5s;
 
         }
         .tab-panel.active {
-            display: block;
             background-color: #fa0;
+            opacity: 1;
+            z-index: 1;
+            transform: translateY(0);
+
         }
     </style>
 </head>
