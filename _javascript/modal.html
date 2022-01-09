@@ -83,11 +83,21 @@
             }
         })
         document.body.onclick = e => {
-            if(e.target.className.indexOf('modal-close') > -1){
-                let modals = document.querySelectorAll('.modal');
-                modals.forEach(m => {
-                    m.classList.remove('active')
-                })
+            // if(e.target.className.indexOf('modal-close') > -1){
+            //     let modals = document.querySelectorAll('.modal');
+            //     modals.forEach(m => {
+            //         m.classList.remove('active')
+            //     })
+            // }
+            // let close = Array.from(e.target.classList);
+            // let close = [...e.target.classList];
+            // console.log(close.includes('modal-close'));
+            if([...e.target.classList].includes('modal-close')){
+                // let modals = document.querySelectorAll('.modal');
+                // modals.forEach(m => {
+                    // m.classList.remove('active')
+                // })
+                document.querySelector('.modal.active').classList.remove('active');
             }
         }
     </script>
