@@ -12,6 +12,12 @@
             box-sizing: border-box;
             font-family: 'helvetica';
         }
+        .modal {
+            display: none;
+        }
+        .modal.active {
+            display: block;
+        }
         .modal-overlay {
             position: fixed;
             width: 100%;
@@ -48,5 +54,16 @@
             </div>
         </div>
     </div>
+    <script>
+        let modalBtns = document.querySelectorAll('.modal-btn');
+        modalBtns.forEach(modalBtn => {
+            modalBtn.onclick = function(){
+                let modal = this.dataset.modal;
+                let href = this.getAttribute('href');
+                console.log(modal);
+                document.querySelector(href).classList.add('active');
+            }
+        })
+    </script>
 </body>
 </html>
