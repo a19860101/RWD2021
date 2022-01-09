@@ -65,5 +65,16 @@
             </p>
         </div>
     </div>
+    <script>
+        let tabLinks = document.querySelectorAll('.tab-link');
+        tabLinks.forEach(tabLink => {
+            tabLink.onclick = function(){
+                tabLinks.forEach(tabLink => {
+                    tabLink.classList.remove('active');
+                })
+                this.classList.add('active');
+            }
+        })
+    </script>
 </body>
 </html>
