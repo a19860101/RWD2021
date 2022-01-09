@@ -39,13 +39,31 @@
 </head>
 <body>
     <a href="#modal-1" data-modal="#modal-1" class="modal-btn">modal 1</a>
+    <a href="#modal-2" data-modal="#modal-2" class="modal-btn">modal 2</a>
     <div class="modal" id="modal-1">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay modal-close"></div>
         <div class="modal-container">
             <div class="modal-header">
                 <h3>modal 1</h3>
             </div>
             <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur distinctio quam et nemo cum quaerat assumenda enim veritatis alias, quos sit vel, quisquam rerum impedit praesentium explicabo consequatur! Placeat, eaque?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur distinctio quam et nemo cum quaerat assumenda enim veritatis alias, quos sit vel, quisquam rerum impedit praesentium explicabo consequatur! Placeat, eaque?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-close">close</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal-2">
+        <div class="modal-overlay modal-close"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>modal 2</h3>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur distinctio quam et nemo cum quaerat assumenda enim veritatis alias, quos sit vel, quisquam rerum impedit praesentium explicabo consequatur! Placeat, eaque?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur distinctio quam et nemo cum quaerat assumenda enim veritatis alias, quos sit vel, quisquam rerum impedit praesentium explicabo consequatur! Placeat, eaque?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur distinctio quam et nemo cum quaerat assumenda enim veritatis alias, quos sit vel, quisquam rerum impedit praesentium explicabo consequatur! Placeat, eaque?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur distinctio quam et nemo cum quaerat assumenda enim veritatis alias, quos sit vel, quisquam rerum impedit praesentium explicabo consequatur! Placeat, eaque?</p>
             </div>
@@ -65,7 +83,12 @@
             }
         })
         document.body.onclick = e => {
-            console.log(e.target);
+            if(e.target.className.indexOf('modal-close') > -1){
+                let modals = document.querySelectorAll('.modal');
+                modals.forEach(m => {
+                    m.classList.remove('active')
+                })
+            }
         }
     </script>
 </body>
