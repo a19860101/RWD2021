@@ -7,14 +7,21 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container"></div>
     <script>
         fetch('data.json')
-        .then(function(res){
-            return res.json()
-        })
-        .then(function(data){
+        .then(res => res.json())
+        .then(data => {
             data.forEach(item=>{
                 console.log(item.id)
+                let h2 = document.createElement('h2');
+                h2.append(item.title);
+
+                let price = document.createElement('div');
+                price.classList.add('price');
+                price.append(item.price);
+                
+                document.querySelector('.container').append(h2,price);
             })
         })
     </script>
