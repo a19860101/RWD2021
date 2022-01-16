@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -52,8 +52,12 @@
                 // let seconds = myDate.getSeconds();
 
                 let dateContent = `${year}年${month}月${date}日(${D[day]}) ${hours}:${minutes}`;
+
+                let icon = document.createElement('img');
+                icon.setAttribute('src',`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+
                 weatherDate.append(dateContent);
-                container.append(feels_like,desc,weatherDate);
+                container.append(feels_like,desc,icon,weatherDate);
 
 
             })
