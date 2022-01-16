@@ -8,12 +8,13 @@
     <style>
         .slider {
             width: 1200px;
-            height: 400px;
             margin: auto;
             position: relative;
+
+            overflow: hidden;
         }
         .slider-wrapper {
-            /* width: 7200px; */
+            transition: .4s;
         }
         .slider-item {
             float: left;
@@ -23,10 +24,12 @@
 
         .slider-nav {
             position: absolute;
-            bottom: -20px;
+            bottom: 0;
             background-color: #fa0;
             width: 100%;
             text-align: center;
+
+            z-index: 999;
         }
     </style>
 </head>
@@ -64,7 +67,9 @@
         let defaultWidth = document.querySelector('.slider').clientWidth;
         let wrapper = document.querySelector('.slider-wrapper');
         let wrapperWidth = defaultWidth * totalImgs;
-        
+
+        wrapper.style.width = wrapperWidth + 'px';
+
         console.log(wrapperWidth)
 
         let next = document.querySelector('.slider-next');
@@ -82,9 +87,7 @@
             }
             console.log(currentIndex)
             
-            document.querySelector('.slider-item.active').classList.remove('active');
-            imgs[currentIndex].classList.add('active');
-            
+            wrapper.style.marginLeft = (-currentIndex) * defaultWidth + 'px';
 
         }
 
