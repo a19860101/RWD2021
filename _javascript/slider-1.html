@@ -11,18 +11,27 @@
             height: 400px;
             margin: auto;
             position: relative;
+            /* overflow: hidden; */
         }
         .slider-item {
             position: absolute;
             opacity: 0;
             z-index: -1;
-            transform:translateY(-10%) ;
+            transform:translateX(-10%) ;
             transition: .6s;
         }
         .slider-item.active {
             opacity: 1;
             z-index: 5;
-            transform:translateY(0) ;
+            transform:translateX(0) ;
+        }
+
+        .slider-nav {
+            position: absolute;
+            bottom: -20px;
+            background-color: #fa0;
+            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
@@ -46,11 +55,21 @@
         <div class="slider-item">
             <img src="https://picsum.photos/id/31/1200/400" alt="">
         </div>
+        <div class="slider-nav">
+            <a href="#" class="slider-prev">Prev</a>
+            <a href="#" class="slider-next">Next</a>
+        </div>
     </div>
     <script>
         let imgs = [...document.querySelectorAll('.slider-item')];
         let totalImgs = imgs.length;
         let currentIndex = 0;
+
+        let next = document.querySelector('.slider-next');
+        let prev = document.querySelector('.slider-prev');
+
+        next.onclick = () => {}
+        prev.onclick = () => {}
 
         function slider(){
             
@@ -60,7 +79,13 @@
             //     currentIndex++;
             // }
 
+            // if(currentIndex == 0){
+            //     currentIndex = totalImgs;
+            // }
             currentIndex = (currentIndex+1) % totalImgs;
+
+            currentIndex = currentIndex == 0 ? totalImgs : currentIndex;
+            currentIndex = (currentIndex-1) % totalImgs;
             console.log(currentIndex)
             
             document.querySelector('.slider-item.active').classList.remove('active');
