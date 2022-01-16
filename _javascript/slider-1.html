@@ -68,24 +68,26 @@
         let next = document.querySelector('.slider-next');
         let prev = document.querySelector('.slider-prev');
 
-        next.onclick = () => {}
-        prev.onclick = () => {}
+        next.onclick = () => slider('next');
+        prev.onclick = () => slider('prev');
 
-        function slider(){
-            
-            // if(currentIndex == totalImgs - 1){
-            //     currentIndex = 0;
-            // }else{
-            //     currentIndex++;
-            // }
+        function slider(direction = 'next'){
+            if(direction === 'next'){
 
-            // if(currentIndex == 0){
-            //     currentIndex = totalImgs;
-            // }
-            currentIndex = (currentIndex+1) % totalImgs;
+                // if(currentIndex == totalImgs - 1){
+                //     currentIndex = 0;
+                // }else{
+                //     currentIndex++;
+                // }
+                currentIndex = (currentIndex+1) % totalImgs;
+            }else{
 
-            currentIndex = currentIndex == 0 ? totalImgs : currentIndex;
-            currentIndex = (currentIndex-1) % totalImgs;
+                // if(currentIndex == 0){
+                //     currentIndex = totalImgs;
+                // }
+                currentIndex = currentIndex == 0 ? totalImgs : currentIndex;
+                currentIndex = (currentIndex-1) % totalImgs;
+            }
             console.log(currentIndex)
             
             document.querySelector('.slider-item.active').classList.remove('active');
@@ -94,7 +96,7 @@
 
         }
 
-        setInterval(slider,1600);
+        setInterval(slider,6000);
     </script>
 </body>
 </html>
