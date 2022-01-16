@@ -41,5 +41,24 @@
             <img src="https://picsum.photos/id/61/1200/400" alt="">
         </div>
     </div>
+    <script>
+        let imgs = [...document.querySelectorAll('.slider-item')];
+        let totalImgs = imgs.length;
+        let currentIndex = 0;
+
+        function slider(){
+            
+            // if(currentIndex == totalImgs - 1){
+            //     currentIndex = 0;
+            // }else{
+            //     currentIndex++;
+            // }
+
+            currentIndex = (currentIndex+1) % totalImgs;
+            console.log(currentIndex)
+        }
+
+        setInterval(slider,1500);
+    </script>
 </body>
 </html>
