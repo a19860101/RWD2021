@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -75,20 +76,21 @@
         <a href="#" data-target="#section-4">Section 4</a>
     </nav>
     <section id="section-1">
-        <h2>Section 1</h2>
+        <h2 class="wow zoomIn" data-wow-delay="0s" data-wow-duration="1.5s">Section 1</h2>
     </section>
     <section id="section-2">
-        <h2>Section 2</h2>
+        <h2 class="wow zoomIn" data-wow-delay="0s" data-wow-duration="1.5s">Section 2</h2>
     </section>
     <section id="section-3">
-        <h2>Section 3</h2>
+        <h2 class="wow zoomIn" data-wow-delay="0s" data-wow-duration="1.5s">Section 3</h2>
     </section>
     <section id="section-4">
-        <h2>Section 4</h2>
+        <h2 class="wow zoomIn" data-wow-delay="0s" data-wow-duration="1.5s">Section 4</h2>
     </section>
     <a href="#" class="gotop"><i class="fas fa-chevron-circle-up fa-3x"></i></a>
     <script>
         $(function(){
+            new WOW().init();
             $('nav').find('a').click(function(e){
                 // $('nav a').removeClass('active');
                 // $(this).addClass('active');
