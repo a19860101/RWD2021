@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
         * {
@@ -53,8 +54,12 @@
             right: 30px;
             z-index: 999;
             color: #222;
-
+            /* transform: translateX(200%)rotate(180deg); */
+            /* transition: 1s; */
             display: none;
+        }
+        .gotop.active {
+            transform: translateX(0%)rotate(0);
         }
     </style>
 </head>
@@ -103,10 +108,16 @@
             $(window).scroll(function(){
                 let h = $(window).scrollTop();
                 console.log(h);
+                let _in = 'bounceIn';
+                let _out = 'hinge';
                 if(h > 650){
-                    $('.gotop').fadeIn();
+                    // $('.gotop').fadeIn();
+                    // $('.gotop').addClass('active');
+                    $('.gotop').show().removeClass('animated '+_out).addClass('animated '+_in);
                 }else{
-                    $('.gotop').fadeOut();
+                    // $('.gotop').fadeOut();
+                    // $('.gotop').removeClass('active');
+                    $('.gotop').removeClass('animated '+_in).addClass('animated '+_out);
                 }
             })
         })
