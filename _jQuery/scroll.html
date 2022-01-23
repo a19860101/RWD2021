@@ -53,6 +53,8 @@
             right: 30px;
             z-index: 999;
             color: #222;
+
+            display: none;
         }
     </style>
 </head>
@@ -78,7 +80,7 @@
     <a href="#" class="gotop"><i class="fas fa-chevron-circle-up fa-3x"></i></a>
     <script>
         $(function(){
-            $('nav').find('a').click(function(){
+            $('nav').find('a').click(function(e){
                 // console.log($(this).data('target'))
                 let target = $(this).data('target');
                 let o = $(target).offset().top;
@@ -86,12 +88,26 @@
                 $('html,body').animate({
                     scrollTop:o
                 });
-
+                e.preventDefault();
+                return false;
             })
-            $('.gotop').click(function(){
+            $('.gotop').click(function(e){
+                
                 $('html,body').animate({
                     scrollTop:0
                 })
+                e.preventDefault();
+                // return false;
+                
+            })
+            $(window).scroll(function(){
+                let h = $(window).scrollTop();
+                console.log(h);
+                if(h > 650){
+                    $('.gotop').fadeIn();
+                }else{
+                    $('.gotop').fadeOut();
+                }
             })
         })
     </script>
