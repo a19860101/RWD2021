@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">dom document object model</h1>
+        <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed perferendis maxime incidunt beatae cumque? Sequi molestiae rerum quos laudantium reiciendis vero autem iste laborum commodi accusantium! Ipsum facere accusamus nisi.
+        </p>
+        <ul>
+            <li class="item">item 1</li>
+            <li class="item">item 2</li>
+            <li class="item">item 3</li>
+            <li class="item">item 4</li>
+        </ul>
+        <a href="#" class="link">link</a>
+    </div>
+    <script>
+        let el = $('.content');
+        // console.log(el.parent());
+        // console.log(el.parents());
+        // console.log(el.parents('body'));
+        console.log($('ul').closest('.container'));
+
+        // console.log(el.next());
+        // console.log(el.prev());
+        // console.log(el.siblings())
+        // console.log(el.siblings('.link'))
+        // console.log($('li').eq(0))
+        // console.log($('li').eq(1))
+        // console.log($('li').eq(2))
+
+        // console.log($('.container').children());
+        // console.log($('.container').children('#title'));
+        // console.log($('.container').find('.item').eq(0));
+
+
+
+    </script>
+</body>
+</html>
