@@ -45,19 +45,19 @@
         <h1>AOS Animate On Scroll</h1>
     </section>
     <section id="first">
-        <div class="box" data-aos="fade-up-right" data-aos-delay="0" data-aos-duration="600">
+        <div class="box" data-aos="fade-up-right" data-aos-delay="0" data-aos-duration="600" data-aos-easing="ease-out-back">
             <h3>First</h3>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti? Similique velit eius quaerat, sequi at maiores eum itaque est ratione accusantium ut blanditiis! Doloribus deserunt eaque quae doloremque repellendus!
             </p>
         </div>
-        <div class="box" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">
+        <div class="box" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600" data-aos-easing="ease-out-back">
             <h3>First</h3>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti? Similique velit eius quaerat, sequi at maiores eum itaque est ratione accusantium ut blanditiis! Doloribus deserunt eaque quae doloremque repellendus!
             </p>
         </div>
-        <div class="box" data-aos="fade-up-left" data-aos-delay="600" data-aos-duration="600">
+        <div class="box" data-aos="fade-up-left" data-aos-delay="600" data-aos-duration="600" data-aos-easing="ease-out-back">
             <h3>First</h3>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti? Similique velit eius quaerat, sequi at maiores eum itaque est ratione accusantium ut blanditiis! Doloribus deserunt eaque quae doloremque repellendus!
@@ -65,25 +65,25 @@
         </div>
     </section>
     <section id="second">
-        <div class="box" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom" data-aos-duration="600" data-aos-delay="0" data-aos="zoom-in-up">
+        <div class="box" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom" data-aos-duration="600" data-aos-delay="0" data-aos="zoom-in-up" data-aos-easing="ease-out-back">
             <h3>Second</h3>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti? Similique velit eius quaerat, sequi at maiores eum itaque est ratione accusantium ut blanditiis! Doloribus deserunt eaque quae doloremque repellendus!
             </p>
         </div>
-        <div class="box" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom" data-aos-duration="600" data-aos-delay="300" data-aos="zoom-out-up">
+        <div class="box" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom" data-aos-duration="600" data-aos-delay="300" data-aos="zoom-out-up" data-aos-easing="ease-out-back">
             <h3>Second</h3>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti? Similique velit eius quaerat, sequi at maiores eum itaque est ratione accusantium ut blanditiis! Doloribus deserunt eaque quae doloremque repellendus!
             </p>
         </div>
-        <div class="box" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom" data-aos-duration="600" data-aos-delay="600" data-aos="zoom-in-up">
+        <div class="box" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom" data-aos-duration="600" data-aos-delay="600" data-aos="zoom-in-up" data-aos-easing="ease-out-back">
             <h3>Second</h3>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti? Similique velit eius quaerat, sequi at maiores eum itaque est ratione accusantium ut blanditiis! Doloribus deserunt eaque quae doloremque repellendus!
             </p>
         </div>
-        <div class="box" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom" data-aos-duration="600" data-aos-delay="900" data-aos="zoom-out-up">
+        <div class="box" data-aos-offset="0" data-aos-anchor-placement="bottom-bottom" data-aos-duration="600" data-aos-delay="900" data-aos="zoom-out-up" data-aos-easing="ease-out-back">
             <h3>Second</h3>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti? Similique velit eius quaerat, sequi at maiores eum itaque est ratione accusantium ut blanditiis! Doloribus deserunt eaque quae doloremque repellendus!
@@ -122,9 +122,28 @@
             </p>
         </div>
     </section>
+    <section id="fourth">
+        <div class="box" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+            <h3>HELLO</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit a rem amet doloribus sit minima animi, temporibus iure modi, expedita ea mollitia repellat! Repellendus consectetur, numquam inventore odit fugiat placeat?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit a rem amet doloribus sit minima animi, temporibus iure modi, expedita ea mollitia repellat! Repellendus consectetur, numquam inventore odit fugiat placeat?
+            </p>
+        </div>
+        <div class="box" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
+            <h3>HELLO</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit a rem amet doloribus sit minima animi, temporibus iure modi, expedita ea mollitia repellat! Repellendus consectetur, numquam inventore odit fugiat placeat?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit a rem amet doloribus sit minima animi, temporibus iure modi, expedita ea mollitia repellat! Repellendus consectetur, numquam inventore odit fugiat placeat?
+            </p>
+        </div>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init()
+        AOS.init({
+            offset: 0,
+            once: true
+        })
     </script>
 </body>
 </html>
