@@ -30,9 +30,10 @@
                         $('#county').append(`<option value=${data}>${data}</option>`);
                     })
                     $('#county').change(function(){
+                        $('.container').empty();
                         let county = $(this).val();
-                        console.log(county)
-                        datas.records.forEach(function(data){
+                        console.log(county);
+                        let result = datas.records.filter(data => data.County === county).forEach(data=>{
                         let content = `
                             <div>
                                 <div>${data.County} - ${data.SiteName} - ${data.Status}</div>
@@ -48,6 +49,28 @@
                             `;
                             $('.container').append(content);
                         })
+
+
+                        // let result = datas.records.filter(function(data){
+                        //     return data.County === county ;
+                        // });
+                        // console.log(result);
+                        // result.forEach(function(data){
+                        // let content = `
+                        //     <div>
+                        //         <div>${data.County} - ${data.SiteName} - ${data.Status}</div>
+                        //         <div>AQI: ${data.AQI}</div>
+                        //         <div>一氧化碳${data.CO}</div>
+                        //         <div>一氧化氮${data.NO}</div>
+                        //         <div>二氧化氮${data.NO2}</div>
+                        //         <div>二氧化硫${data.SO2}</div>
+                        //         <div>臭氧${data.O3}</div>
+                        //         <div>PM2.5${data['PM2.5']}</div>
+                        //         <hr>
+                        //     </div>
+                        //     `;
+                        //     $('.container').append(content);
+                        // })
                     })
                     
                 },
