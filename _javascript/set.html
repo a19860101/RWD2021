@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const x = new Set();
+        x.add('台北市');
+        x.add('新北市');
+        x.add('桃園市');
+        x.add('台北市');
+        x.add('新北市');
+        x.add('桃園市');
+        console.log(x);
+
+        const city = ['台北市','台北市','新北市','新北市','新北市','新北市','桃園市','桃園市'];
+        const city2 = Array.from(new Set(city))
+        const city3 = [...new Set(city)];
+        console.log(city3);
+    </script>
+</body>
+</html>
