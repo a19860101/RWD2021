@@ -1,3 +1,8 @@
+AOS.init({
+    // duration: 800,
+    offset:0,
+    anchorPlacement:'bottom-bottom'
+});
 $(function(){
     $('.scroll').click(function(){
         let scroll = $(this).data('scroll');
