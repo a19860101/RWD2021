@@ -5,7 +5,8 @@
 }
 img {
     width: 100%;
-    vertical-align: top;
+    /* vertical-align: top; */
+    display: block;
 }
 .gotop {
     position: fixed;

@@ -20,7 +20,6 @@ $(function(){
     })
     $(window).scroll(function(){
         let h = $(window).scrollTop();
-        console.log(h);
         let _in = 'bounceIn';
         let _out = 'hinge';
         if(h > 650){
@@ -31,7 +30,6 @@ $(function(){
         $('.scroll').each(function(){
             let scroll = $(this).data('scroll');
             let o = $(scroll).offset().top;
-            console.log(o)
             if(h >= o - 200){
                 $('.scroll').removeClass('active');
                 $(this).addClass('active');
