@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+            $.ajax({
+                url:'https://data.epa.gov.tw/api/v1/aqx_p_432?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&sort=ImportDate%20desc&format=json',
+                dataType:'json',
+                beforeSend:function(){
+                    console.log('loading');
+                },
+                success:function(datas){
+                    datas.records.forEach(function(data){
+                        console.log(data.AQI);
+                        console.log(data.County)
+
+                    })
+                },
+                error:function(){
+
+                }
+            })
+        })
+    </script>
+</body>
+</html>
