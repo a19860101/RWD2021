@@ -23,11 +23,10 @@
                 },
                 success:function(datas){
                     console.log(datas);
-                    let counties = datas.records.map(function(data){
-                        return data.County;
-                    })
-                    counties.forEach(function(county){
-                        $('#county').append(`<option value=${county}>${county}</option>`);
+                    let counties = datas.records.map(data => data.County);
+                    let county = [...new Set(counties)];
+                    county.forEach(function(data){
+                        $('#county').append(`<option value=${data}>${data}</option>`);
                     })
                     console.log(counties);
                     datas.records.forEach(function(data){
