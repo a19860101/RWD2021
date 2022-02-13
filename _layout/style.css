@@ -53,6 +53,10 @@ nav ul {
     background-color: var(--yellow);
     color: var(--dark);
 }
+.menu a.active {
+    background-color: var(--yellow);
+    color: var(--dark);
+}
 @media(min-width:1200px){
     /* nav */
     nav {

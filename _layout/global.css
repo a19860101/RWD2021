@@ -15,7 +15,7 @@ img {
     color: #222;
     /* transform: translateX(200%)rotate(180deg); */
     /* transition: 1s; */
-    /* display: none; */
+    display: none;
 }
 .gotop.active {
     transform: translateX(0%)rotate(0);
