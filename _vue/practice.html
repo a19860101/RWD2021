@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
         .colorBox {
             display: inline-block;
@@ -17,10 +18,16 @@
 </head>
 <body>
     <div id="app">
-        <h1>{{title}} {{currentIndex}}</h1>
+        <h1>{{title}} {{color}}</h1>
         <img :src="`images/${img}`" alt="">
         <div>
             {{desc}}
+        </div>
+        <div>剩餘數量{{qty}}</div>
+        <div>
+            <span v-if="qty > 5">庫存充足</span>
+            <span v-else-if="qty > 0">低庫存</span>
+            <span v-else>補貨中</span>
         </div>
         <div>
             <span 
@@ -29,6 +36,12 @@
                 class="colorBox" 
                 :style="{backgroundColor:variable.hex}"
             ></span>
+        </div>
+        <div v-if="qty > 0">
+            <button>加入購物車</button>
+        </div>
+        <div v-else>
+            <button disabled>補貨中</button>
         </div>
     </div>
     <script>
@@ -43,30 +56,35 @@
                             id:1,
                             color: '粉紅色',
                             hex: 'pink',
+                            qty: 10,
                             img: 'iphone-13-pink-select-2021.png'
                         },
                         {
                             id:2,
                             color: '藍色',
                             hex: 'blue',
+                            qty: 3,
                             img: 'iphone-13-blue-select-2021.png'
                         },
                         {
                             id:3,
                             color: '午夜色',
                             hex: 'black',
+                            qty: 0,
                             img: 'iphone-13-midnight-select-2021.png'
                         },
                         {
                             id:4,
                             color: '星光色',
                             hex: 'white',
+                            qty: 13,
                             img: 'iphone-13-starlight-select-2021.png'
                         },
                         {
                             id:5,
                             color: '紅色',
                             hex: 'red',
+                            qty:2,
                             img: 'iphone-13-product-red-select-2021.png'
                         },
                     ]
@@ -80,6 +98,12 @@
             computed:{
                 img(){
                     return this.variables[this.currentIndex].img;
+                },
+                color(){
+                    return this.variables[this.currentIndex].color
+                },
+                qty(){
+                    return this.variables[this.currentIndex].qty
                 }
             }
         }).mount('#app');
