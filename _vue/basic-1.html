@@ -19,6 +19,8 @@
         <div>
             <div v-for="drink in drinks">{{drink.name}}--NT.${{drink.price}}</div>
         </div>
+        <a v-bind:href="link">Yahoo</a>
+        <a :href="link">Yahoo</a>
     </div>
     <script>
         Vue.createApp({
@@ -26,6 +28,7 @@
                 return {
                     title: 'HELLO VUE',
                     author: 'John Doe',
+                    link:'https://tw.yahoo.com',
                     foods: ['雞排','珍珠奶茶','肉桂捲','薯條'],
                     drinks: [
                         {
