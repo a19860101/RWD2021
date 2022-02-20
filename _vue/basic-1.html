@@ -13,13 +13,32 @@
         <div>
             {{author}}
         </div>
+        <div>
+            <div v-for="(food,idx) in foods">{{idx}}--{{food}}</div>
+        </div>
+        <div>
+            <div v-for="drink in drinks">{{drink.name}}--NT.${{drink.price}}</div>
+        </div>
     </div>
     <script>
         Vue.createApp({
             data(){
                 return {
                     title: 'HELLO VUE',
-                    author: 'John Doe'
+                    author: 'John Doe',
+                    foods: ['雞排','珍珠奶茶','肉桂捲','薯條'],
+                    drinks: [
+                        {
+                            id:1,
+                            name:'紅茶',
+                            price: 20
+                        },
+                        {
+                            id:1,
+                            name:'乃茶',
+                            price: 25
+                        }
+                    ]
                 }
             }
         }).mount('#app');
