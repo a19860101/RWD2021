@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+
+</head>
+<body>
+    <div id="app">
+        <form action="">
+            <div>
+                <input type="text" v-model="email">
+                <div>
+                    {{email}}
+                </div>
+            </div>
+            <div>
+                <label for="">
+                    <input type="radio" name="gender" v-model="gender" value="男">
+                    男
+                </label>
+                <label for="">
+                    <input type="radio" name="gender" v-model="gender" value="女">
+                    女
+                </label>
+                <div>
+                    {{gender}}
+                </div>
+            </div>
+            <div>
+                <label for="">
+                    <input type="checkbox" name="skills" v-model="skills" value="平面">
+                    平面
+                </label>
+                <label for="">
+                    <input type="checkbox" name="skills" v-model="skills" value="網頁">
+                    網頁
+                </label>
+                <label for="">
+                    <input type="checkbox" name="skills" v-model="skills" value="剪輯">
+                    剪輯
+                </label>
+                <div>
+                    <ul>
+                        <li v-for="skill in skills">{{skill}}</li> 
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <select name="edu" id="edu" v-model="edu">
+                    <option >--請選擇--</option>
+                    <option value="國小">國小</option>
+                    <option value="國中">國中</option>
+                    <option value="高中職">高中職</option>
+                    <option value="大專院校">大專院校</option>
+                    <option value="研究所以上">研究所以上</option>
+                </select>
+                <div>
+                    {{edu}}
+                </div>
+            </div>
+        </form>
+        
+    </div>
+    <script>
+        const v = Vue.createApp({
+            data(){
+                return {
+                    email: 'asdf@gmail.com',
+                    gender: '',
+                    skills: [],
+                    edu:'--請選擇--'
+                }
+            }
+        });
+
+        v.mount('#app');
+
+    </script>
+</body>
+</html>
