@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #098;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button class="play">play</button>
+    <button class="pause">pause</button>
+    <button class="reverse">reverse</button>
+    <button class="restart">restart</button>
+    <div class="box"></div>
+    <script>
+        let tween = gsap.to('.box',{
+            x: 600,
+            duration: 3,
+            paused: true
+        })
+
+        document.querySelector('.play').onclick = ()=>{
+            tween.play();
+        }
+        document.querySelector('.pause').onclick = ()=>{
+            tween.pause();
+        }
+        document.querySelector('.reverse').onclick = ()=>{
+            tween.reverse();
+        }
+        document.querySelector('.restart').onclick = ()=>{
+            tween.restart();
+        }
+
+    </script>
+</body>
+</html>
