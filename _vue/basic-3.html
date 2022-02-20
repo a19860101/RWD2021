@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="notice()">Notice</button>
+        <button @click="changeColor()">changeColor</button>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aperiam officiis, quos fuga minima sint exercitationem tempore itaque perferendis nihil! Hic voluptate totam atque. Veniam quibusdam aliquid excepturi sed cum.
+        </p>
+    </div>    
+    <script>
+        Vue.createApp({
+            data(){
+                return {}
+            },
+            methods:{
+                notice(){
+                    alert('NOTICE!!!!');
+                },
+                changeColor(){
+                    document.querySelector('p').style.color = 'red';
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
