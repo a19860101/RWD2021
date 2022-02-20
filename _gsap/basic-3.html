@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EasePack.min.js"></script>
+
     <style>
         .box {
             width: 150px;
@@ -23,16 +25,19 @@
     <div class="box"></div>
     <div class="box2"></div>
     <script>
+        gsap.registerPlugin(CustomEase);
+
         gsap.to('.box',{
             x: 600,
             delay: 1,
-            duration: 1,
+            duration: 5,
         })
         gsap.to('.box2',{
             x: 600,
             delay: 1,
-            duration: 1,
-            ease: 'elastic'
+            duration: 5,
+            // ease: "rough({ strength: 2, points: 50, template: none.out, taper: none, randomize: true, clamp: false })"
+            ease: CustomEase.create("custom", "M0,0,C0.073,0.222,0.232,0.379,0.408,0.432,0.533,0.469,0.694,0.349,0.718,0.454,0.77,0.69,0.818,1.001,1,1")
         })
     </script>
 </body>
