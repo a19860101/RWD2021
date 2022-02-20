@@ -15,11 +15,15 @@
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aperiam officiis, quos fuga minima sint exercitationem tempore itaque perferendis nihil! Hic voluptate totam atque. Veniam quibusdam aliquid excepturi sed cum.
         </p>
+        {{total}}
     </div>    
     <script>
         Vue.createApp({
             data(){
-                return {}
+                return {
+                    price: 123,
+                    tax: 1.5
+                }
             },
             methods:{
                 notice(){
@@ -27,6 +31,11 @@
                 },
                 changeColor(){
                     document.querySelector('p').style.color = 'red';
+                }
+            },
+            computed:{
+                total(){
+                    return this.price * this.tax;
                 }
             }
         }).mount('#app');
