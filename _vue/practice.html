@@ -11,18 +11,24 @@
             display: inline-block;
             width: 50px;
             height: 50px;
+            border: 1px solid #000;
         }
     </style>
 </head>
 <body>
     <div id="app">
-        <h1>{{title}}</h1>
-        <img :src="images/${img}" alt="">
+        <h1>{{title}} {{currentIndex}}</h1>
+        <img :src="`images/${img}`" alt="">
         <div>
             {{desc}}
         </div>
         <div>
-            <span v-for="variable in variables" class="colorBox" :style="{backgroundColor:variable.hex}"></span>
+            <span 
+                @click="changeIndex(idx)"
+                v-for="(variable,idx) in variables" 
+                class="colorBox" 
+                :style="{backgroundColor:variable.hex}"
+            ></span>
         </div>
     </div>
     <script>
@@ -31,7 +37,7 @@
                 return {
                     title: 'iPhone 13',
                     desc:'以 iPhone 8 或後續機型換購，獲享最高達 NT$3,000 - NT$21,200 折抵優惠**',
-                    img: 'iphone-13-pink-select-2021.png',
+                    currentIndex:0,
                     variables: [
                         {
                             id:1,
@@ -64,6 +70,16 @@
                             img: 'iphone-13-product-red-select-2021.png'
                         },
                     ]
+                }
+            },
+            methods:{
+                changeIndex(idx){
+                    this.currentIndex = idx;
+                },
+            },
+            computed:{
+                img(){
+                    return this.variables[this.currentIndex].img;
                 }
             }
         }).mount('#app');
