@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        .colorBox {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <img :src="images/${img}" alt="">
+        <div>
+            {{desc}}
+        </div>
+        <div>
+            <span v-for="variable in variables" class="colorBox" :style="{backgroundColor:variable.hex}"></span>
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    title: 'iPhone 13',
+                    desc:'以 iPhone 8 或後續機型換購，獲享最高達 NT$3,000 - NT$21,200 折抵優惠**',
+                    img: 'iphone-13-pink-select-2021.png',
+                    variables: [
+                        {
+                            id:1,
+                            color: '粉紅色',
+                            hex: 'pink',
+                            img: 'iphone-13-pink-select-2021.png'
+                        },
+                        {
+                            id:2,
+                            color: '藍色',
+                            hex: 'blue',
+                            img: 'iphone-13-blue-select-2021.png'
+                        },
+                        {
+                            id:3,
+                            color: '午夜色',
+                            hex: 'black',
+                            img: 'iphone-13-midnight-select-2021.png'
+                        },
+                        {
+                            id:4,
+                            color: '星光色',
+                            hex: 'white',
+                            img: 'iphone-13-starlight-select-2021.png'
+                        },
+                        {
+                            id:5,
+                            color: '紅色',
+                            hex: 'red',
+                            img: 'iphone-13-product-red-select-2021.png'
+                        },
+                    ]
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
