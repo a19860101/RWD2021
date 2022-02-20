@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #123;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>    
+    <div class="box"></div>    
+    <div class="box"></div>    
+    <div class="box"></div>    
+    <div class="box"></div>    
+    <div class="box"></div>   
+    <div class="box"></div>   
+    <script>
+        gsap.to('.box',{
+            x: 600,
+            delay:1,
+            duration: 3,
+            ease:'power3',
+            // stagger:0.3
+            stagger: {
+                each: 0.3,
+                // amount:3,
+                from: 'random',
+                // start,end,center,edges,random
+            }
+        })
+    </script> 
+</body>
+</html>
